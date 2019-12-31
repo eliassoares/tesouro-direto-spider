@@ -25,7 +25,6 @@ create table public_title_values
 	id SERIAL PRIMARY KEY,
 	public_title_id smallint not null references public_titles(id),
 	tax float4 not null,
-	minimum_value float4 not null,
 	unit_price float4 not null,
 	created_at timestamp default now()
 );

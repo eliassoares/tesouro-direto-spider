@@ -48,7 +48,6 @@ class TesouroDiretoParser:
                 'name': m[1].strip(),
                 'due_date': datetime.strptime(m[3], '%d/%m/%Y'),
                 'tax': self._convert_to_float(m[5]),
-                'minimum_value': self._convert_to_float(m[7]),
                 'unit_price': self._convert_to_float(m[9])
             })
 

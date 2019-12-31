@@ -24,5 +24,5 @@ class TesouroDiretoSpider:
 
             public_title_id = self._dict_public_titles[value['name']]
             self._database_manager.save_public_title_value(
-                public_title_id, value['tax'], value['minimum_value'], value['unit_price']
+                public_title_id, value['tax'], value['unit_price']
             )
