@@ -45,7 +45,7 @@ class DatabaseManager:
     def save_public_title_value(self, public_title_id, tax, unit_price) -> int:
         query = '''
             INSERT INTO public_title_values(public_title_id, tax, unit_price)
-            VALUES(%s, %s, %s, %s) RETURNING id;
+            VALUES(%s, %s, %s) RETURNING id;
         '''
         self._cur.execute(query, (public_title_id, tax, unit_price))
         self._con.commit()

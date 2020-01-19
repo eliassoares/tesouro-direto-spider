@@ -8,7 +8,7 @@ class TesouroDiretoParser:
     def __init__(self, html_text_to_parser):
         self._public_title_table_patt = r'<tr class=\"camposTesouroDireto ?\">\s+<td(.*?)>(.*?)</td>\s+<td(.*?)>(' \
                                           r'.*?)</td>\s+<td(.*?)>(.*?)</td>\s+<td(.*?)>(.*?)</td>\s+<td(.*?)>(' \
-                                          r'.*?)</td>\s+</tr> '
+                                          r'.*?)</td>\s+</tr>'
         self._updated_at_patt = r'Atualizado em: <b>([\d/:\s]+)</b>'
         self._html_text_to_parser = html_text_to_parser
         self._file_path = f'{getcwd()}/static_data/last_update.data'
